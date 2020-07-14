@@ -1,0 +1,20 @@
+header {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    background-color: red;
+    height: 150px;
+    @include flex($dir: column, $align: center);
+    @include medq($break-m) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+a.login-btn {
+    background-color: $btn;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: $white;
+}
