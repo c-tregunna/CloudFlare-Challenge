@@ -2,9 +2,9 @@ header {
     width: 100%;
     max-width: 1100px;
     margin: auto;
-    background-color: red;
     height: 150px;
-    @include flex($dir: column, $align: center);
+    padding: 20px;
+    @include flex($dir: column, $just: space-between, $align: center);
     @include medq($break-m) {
         flex-direction: row;
         justify-content: space-between;
