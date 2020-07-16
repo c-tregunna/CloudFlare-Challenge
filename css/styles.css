@@ -409,6 +409,10 @@ ul {
   list-style: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #41444c;
 }
@@ -417,7 +421,18 @@ body {
   width: 95%;
   max-width: 1200px;
   margin: auto;
-  border: 1px solid #fff;
+}
+
+h1 {
+  font-size: 2em;
+  color: #bababd;
+  margin: 6px;
+}
+@media (min-width: 768px) {
+  h1 {
+    margin: 10px 0px 25px 0px;
+    font-size: 3em;
+  }
 }
 
 h3 {
@@ -427,6 +442,10 @@ h3 {
 
 h3 span {
   font-weight: bold;
+}
+
+h3.main-logo-text {
+  margin-top: 0px;
 }
 
 header {
@@ -453,13 +472,141 @@ a.login-btn {
   border-radius: 20px;
   text-decoration: none;
   color: #fff;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  a.login-btn {
+    margin-top: 0px;
+  }
 }
 
 .main-wrapper {
-  width: 95%;
-  margin: 60px auto;
+  width: 80%;
+  margin: 20px auto;
   height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .main-wrapper {
+    flex-direction: row;
+  }
+}
+
+.main-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(0deg, rgba(55, 129, 198, 0.98), rgba(55, 129, 198, 0.98)), url("../images/bg-image.jpg") no-repeat top center;
+  background-size: cover;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .main-image {
+    width: 35%;
+    height: 100%;
+  }
+}
+
+.sign-up {
+  width: 100%;
   background-color: #fff;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .sign-up {
+    width: 60%;
+    height: 100%;
+  }
+}
+
+.sign-up-login {
+  box-shadow: 0px 4px 4px #bababd;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .image-wrapper {
+    width: 80%;
+    margin: auto;
+    flex-direction: column;
+    height: 80%;
+  }
+}
+
+.main-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10px;
+}
+@media (min-width: 768px) {
+  .main-logo-wrap {
+    padding-left: 0px;
+  }
+}
+
+ul.list {
+  width: 45%;
+  list-style-type: disc;
+  list-style-image: url("../images/bullet.png");
+  color: #fff;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  ul.list {
+    width: 80%;
+    padding-right: 0px;
+  }
+}
+
+ul li {
+  padding-left: 8px;
+  padding-bottom: 8px;
+  font-size: 0.6em;
+}
+@media (min-width: 768px) {
+  ul li {
+    font-size: 0.8em;
+    padding-bottom: 16px;
+  }
+}
+
+.bottom-content {
+  width: 70%;
+  margin: 6px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .bottom-content {
+    flex-direction: row;
+    margin-top: 70px;
+  }
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .social-icons {
+    margin: 0px;
+  }
 }
 
 .main-nav {
@@ -513,7 +660,7 @@ a.login-btn {
   left: 0;
   overflow-x: hidden;
   transition: 0.5s;
-  background-color: #3781c6;
+  background-color: rgba(55, 129, 198, 0.98);
 }
 
 .overlay-content {
@@ -572,6 +719,74 @@ svg.top-logo {
   height: 50px;
   color: #228cee;
   margin-right: 4px;
+}
+
+svg.main-logo {
+  height: 60px;
+  color: #fff;
+  margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+  svg.main-logo {
+    height: 120px;
+  }
+}
+
+svg.icons {
+  height: 30px;
+  margin: 0px 6px;
+  -webkit-filter: drop-shadow(0px 4px 4px black) invert(45%);
+  filter: drop-shadow(0px 4px 4px black) invert(45%);
+}
+
+form {
+  width: 70%;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #c2c4ca;
+  margin: 6px 0px;
+  transition: border-bottom 0.6s ease-in;
+}
+input[type=text]:focus,
+input[type=password]:focus {
+  border-bottom: 3px solid #228cee;
+}
+@media (min-width: 768px) {
+  input[type=text],
+input[type=password] {
+    margin: 12px 0px;
+  }
+}
+
+label {
+  color: #bababd;
+  font-size: 0.7em;
+  transition: color 0.4s ease-in;
+}
+label:hover {
+  color: black;
+}
+
+span.forgot {
+  color: #bababd;
+  font-size: 0.7em;
+  width: 70%;
+  text-align: right;
+  transition: color 0.4s ease-in;
+}
+span.forgot:hover {
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */

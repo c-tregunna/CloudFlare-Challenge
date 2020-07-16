@@ -1,0 +1,46 @@
+
+form {
+    width: 70%;
+}
+
+.form-input {
+    @include flex($dir: column, $align: flex-start);
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid lighten($bg, 50%);
+    margin: 6px 0px;
+    transition: border-bottom .6s ease-in;
+    &:focus {
+        border-bottom: 3px solid $btn;
+    }
+    @include medq($break-m) {
+        margin: 12px 0px;
+    }
+
+}
+
+label {
+    color: $menu-text;
+    font-size: .7em;
+    transition: color .4s ease-in;
+    &:hover {
+        color: black;
+    }
+}
+
+span.forgot {
+    color: $menu-text;
+    font-size: .7em;
+    width: 70%;
+    text-align: right;
+    transition: color .4s ease-in;
+    &:hover {
+        color: black;
+    }
+}
+
+

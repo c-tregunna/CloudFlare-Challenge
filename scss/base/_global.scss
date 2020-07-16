@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: $bg;
 }
@@ -6,6 +10,5 @@ body {
     width: 95%;
     max-width: 1200px;
     margin: auto;
-    border: 1px solid $white;
 }
 
