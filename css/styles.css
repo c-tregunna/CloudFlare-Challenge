@@ -423,6 +423,25 @@ body {
   margin: auto;
 }
 
+hr {
+  width: 50%;
+  margin: 60px auto 20px;
+  border: 2px solid #228cee;
+}
+
+footer {
+  width: 60%;
+  margin: auto;
+}
+footer p {
+  color: #fff;
+  font-size: 0.75em;
+  text-align: center;
+}
+footer p span {
+  color: #228cee;
+}
+
 h1 {
   font-size: 2em;
   color: #bababd;
@@ -452,7 +471,7 @@ header {
   width: 95%;
   max-width: 1100px;
   margin: auto;
-  height: 150px;
+  height: 80px;
   padding: 20px;
   display: flex;
   flex-direction: column;
